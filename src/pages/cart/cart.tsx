@@ -27,7 +27,7 @@ export function Cart () {
                 <span><Wallet size={24} color="white" /></span>
             </div>
             <div className={`mobile-pay ${!toggle ? "show" : ""}`}>
-                <div onClick={()=> setToggle(!toggle)} className="cart-icon"> <h1>See in cart</h1> <span><ShoppingCart size={24} color="white"/> </span></div>
+                <div onClick={()=> setToggle(!toggle)} className="cart-icon"> <h1>See in cart</h1> <span><ShoppingCart size={24} weight="fill" color="white"/> </span></div>
                 <div className="mobile-amount">
                  <h3>${total} </h3>
                 </div>
@@ -37,10 +37,10 @@ export function Cart () {
                 </div>
             </div>
             </div>
-         { total > 0 ?<div className="show-cart">
-                {data?.products.map((data: Products) => cartItems[data.id] !==  0 && <DisplayCart data={data}/> )}
-            </div>   : <h1>Cart is Empty</h1>
-            }
+                { total > 0 ?<div className="show-cart">
+                        {data?.products.map((data: Products) => cartItems[data.id] !==  0 && <DisplayCart data={data}/> )}
+                    </div>   : <h1>Cart is Empty</h1>
+                    }
            
             <div className="checkout">
                 <div className="check">
@@ -52,7 +52,7 @@ export function Cart () {
                 </div>
                 <div className="pay">
                     <button>Pay</button>
-                    <button>Continue Shoping</button>
+                    <button onClick={()=> navigate("/")}>Continue Shoping</button>
                 </div>
             </div>
         </div>

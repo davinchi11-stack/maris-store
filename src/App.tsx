@@ -5,6 +5,7 @@ import { Shop } from './pages/shop/shop'
 import { Cart } from './pages/cart/cart'
 import {QueryClient , QueryClientProvider} from '@tanstack/react-query'
 import {  ShopContextMain } from './context/shopContext'
+import { ItemsInfo } from './pages/itemsInfo/itemsInfo'
 
 
  const router = createBrowserRouter(
@@ -12,6 +13,7 @@ import {  ShopContextMain } from './context/shopContext'
        <Route path='/' element={<Wrapper/>}>
         <Route index element={<Shop/>}/>
         <Route path='cart' element={<Cart/>}/>
+        <Route path='/:id' element={<ItemsInfo/>}/>
        </Route>
     )
  )

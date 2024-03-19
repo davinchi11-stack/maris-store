@@ -11,9 +11,12 @@ export interface Products {
     price : string;
     thumbnail : string
     title : string;
-    brand : string
-
-
+    brand : string ;
+   category : string ;
+   description : string;
+   discountPercentage : number ;
+   stock : number ;
+   rating :number
 }
 
 const breakpointColumnsObj = {
